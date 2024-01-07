@@ -2,15 +2,15 @@
 let todoList = [
   {
     item: 'Plan some activities',
-    dueDate: '4/10/2023'
+    dueDate: '2023-10-4'
   },
   {
     item: 'Complete the course',
-    dueDate: '4/10/2023'
+    dueDate: '2023-10-4'
   },
   {
     item: 'Buy groceries',
-    dueDate: '4/10/2023'
+    dueDate: '2023-10-4'
   }
 ];
 
@@ -18,12 +18,14 @@ displayItems();
 
 // funtion for onclick on add button
 function addTodo() { 
-  let inputElement = document.querySelector('#todo-input');  // This will select the html element that is needed for add button
+  let inputElement = document.querySelector('#todo-input');  
   let inputDate = document.querySelector('#todo-date');
 
-  let todoItem = inputElement.value;   // This will take out the value from the selected element
+  let todoItem = inputElement.value;   
   let todoDate = inputDate.value;
+
   todoList.push({item: todoItem, dueDate: todoDate});    // This will add every item at the end of array
+  
   inputElement.value = '';  //This will clear the input box after clicking add button
   inputDate.value;
   displayItems();
